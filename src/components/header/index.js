@@ -6,7 +6,7 @@ const Header = ({ setAddExpModalVisible }) => {
   return (
     <div style={styles.wrapper}>
       <div style={styles.titleWrapper}>
-        <Text h3>Simple Expense Tracker</Text>
+        <Text h3>Expense Tracker</Text>
       </div>
       <div style={styles.midSpace}></div>
       <div style={styles.buttonsWrapper}>

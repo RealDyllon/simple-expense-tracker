@@ -9,6 +9,7 @@ import "./App.css";
 
 import Header from "./components/header";
 import AddExpenseModal from "./components/modals/addExpense";
+import Expenses from "./components/expenses/main";
 
 function App() {
   const [initExpensesLocalStorage] = useLocalStorage("expenses", []);
@@ -54,7 +55,11 @@ function App() {
         setVisible={setAddExpModalVisible}
         addExpense={addExpense}
       />
-      {/* <Expenses /> */}
+      <Expenses
+        expenses={expenses}
+        editExpense={editExpense}
+        removeExpense={removeExpense}
+      />
     </div>
   );
 }
