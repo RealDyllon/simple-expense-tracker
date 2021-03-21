@@ -1,7 +1,7 @@
 import { Modal } from "@geist-ui/react";
 import React from "react";
 
-const EditModal = ({ isVisible, setVisible }) => {
+const DeleteModal = ({ isVisible, setVisible, handleDelete }) => {
   const closeHandler = () => {
     setVisible(false);
   };
@@ -18,9 +18,9 @@ const EditModal = ({ isVisible, setVisible }) => {
       <Modal.Action passive onClick={closeHandler}>
         Cancel
       </Modal.Action>
-      <Modal.Action>Delete</Modal.Action>
+      <Modal.Action onClick={handleDelete}>Delete</Modal.Action>
     </Modal>
   );
 };
 
-export default EditModal;
+export default DeleteModal;

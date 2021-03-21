@@ -3,13 +3,13 @@ import React from "react";
 import ExpensesList from "../list";
 import ExpensesViz from "../visualizations";
 
-const Expenses = ({ expenses, editExpenses, removeExpenses }) => {
+const Expenses = ({ expenses, editExpense, removeExpense }) => {
   return (
     <div style={styles.wrapper}>
       <ExpensesList
         expenses={expenses}
-        editExpenses={editExpenses}
-        removeExpenses={removeExpenses}
+        editExpense={editExpense}
+        removeExpense={removeExpense}
       />
       <ExpensesViz />
     </div>

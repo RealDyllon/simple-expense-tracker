@@ -1,5 +1,6 @@
 import { Input, Modal, Spacer } from "@geist-ui/react";
 import React, { useState } from "react";
+import ExpenseModalContent from "../expense";
 
 const AddExpenseModal = ({ isVisible, setVisible, addExpense }) => {
   const [name, setName] = useState("");
@@ -33,23 +34,10 @@ const AddExpenseModal = ({ isVisible, setVisible, addExpense }) => {
     <Modal open={isVisible} onClose={closeHandler}>
       <Modal.Title>Add Expense</Modal.Title>
       {/* <Modal.Subtitle>This is a modal</Modal.Subtitle> */}
-      <Modal.Content>
-        {/* <p>Some content contained within the modal.</p> */}
-
-        <Input
-          label="Name"
-          placeholder="Big Mac"
-          width="100%"
-          onChange={handleChangeName}
-        />
-        <Spacer y={0.5} />
-        <Input
-          label="Cost ($)"
-          placeholder="123.00"
-          width="100%"
-          onChange={handleChangeCost}
-        />
-      </Modal.Content>
+      <ExpenseModalContent
+        handleChangeName={handleChangeName}
+        handleChangeCost={handleChangeCost}
+      />
       <Modal.Action passive onClick={closeHandler}>
         Cancel
       </Modal.Action>

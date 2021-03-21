@@ -2,18 +2,18 @@ import { Button, Spacer, Text } from "@geist-ui/react";
 import { Edit2, Power, Trash, Trash2 } from "@geist-ui/react-icons";
 import React, { useState } from "react";
 import EditModal from "./EditModal";
+import DeleteModal from "./DeleteModal";
 
-const ListItem = ({ expense, editExpenses, removeExpenses }) => {
+const ListItem = ({ expense, editExpense, removeExpense }) => {
   const [isEditModalVisible, setEditModalVisible] = useState(false);
   const [isDeleteModalVisible, setDeleteModalVisible] = useState(false);
 
-  // todo:
-  // const handleEdit = () => {
-  //   editExpenses(expense.uuid, {})
-  // };
+  const handleEdit = (editData) => {
+    editExpense(expense.uuid, editData);
+  };
 
   const handleDelete = () => {
-    removeExpenses(expense.uuid);
+    removeExpense(expense.uuid);
   };
 
   return (
@@ -45,6 +45,13 @@ const ListItem = ({ expense, editExpenses, removeExpenses }) => {
         expense={expense}
         isVisible={isEditModalVisible}
         setVisible={setEditModalVisible}
+        handleEdit={handleEdit}
+      />
+      <DeleteModal
+        // expense={expense}
+        isVisible={isDeleteModalVisible}
+        setVisible={setDeleteModalVisible}
+        handleDelete={handleDelete}
       />
     </div>
   );

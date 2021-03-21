@@ -35,12 +35,32 @@ function App() {
   };
 
   const editExpense = (uuid, newData) => {
+    console.log("uuid", uuid);
+
+    const indexOfChange = expenses.findIndex(
+      (element) => element.uuid === uuid
+    );
+
+    console.log("indexOfChange", indexOfChange);
+
+    if (indexOfChange === -1) return;
+
+    const currentElement = expenses[indexOfChange];
+
+    console.log("currentElement", currentElement);
+
     const newExpenses = expenses
-      .filter((expense) => expense.uuid !== uuid)
+      .slice(0, indexOfChange)
       .concat({
-        uuid,
+        ...currentElement,
         ...newData,
-      });
+      })
+      .concat(expenses.slice(indexOfChange + 1));
+
+    console.log("expenses", expenses);
+    console.log("newExpenses", newExpenses);
+
+    setExpenses(newExpenses);
   };
 
   useEffect(() => {
