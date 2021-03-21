@@ -1,5 +1,5 @@
 import React from "react";
-import EditModal from "./EditModal";
+import EditModal from "../../modals/EditModal";
 import ListItem from "./ListItem";
 
 const ExpensesList = ({ expenses, editExpense, removeExpense }) => {

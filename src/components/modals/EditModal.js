@@ -1,6 +1,6 @@
 import { Modal } from "@geist-ui/react";
 import React, { useState } from "react";
-import ExpenseModalContent from "../../modals/expense";
+import ExpenseModalContent from "./expense";
 
 const EditModal = ({ expense, isVisible, setVisible, handleEdit }) => {
   const closeHandler = () => {

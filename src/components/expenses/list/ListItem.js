@@ -1,8 +1,8 @@
 import { Button, Spacer, Text } from "@geist-ui/react";
 import { Edit2, Power, Trash, Trash2 } from "@geist-ui/react-icons";
 import React, { useState } from "react";
-import EditModal from "./EditModal";
-import DeleteModal from "./DeleteModal";
+import EditModal from "../../modals/EditModal";
+import DeleteModal from "../../modals/DeleteModal";
 
 const ListItem = ({ expense, editExpense, removeExpense }) => {
   const [isEditModalVisible, setEditModalVisible] = useState(false);
