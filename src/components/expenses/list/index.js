@@ -1,16 +1,16 @@
 import React from "react";
-import EditModal from "./EditModal";
+import EditModal from "../../modals/EditModal";
 import ListItem from "./ListItem";
 
-const ExpensesList = ({ expenses, editExpenses, removeExpenses }) => {
+const ExpensesList = ({ expenses, editExpense, removeExpense }) => {
   return (
     <div style={styles.wrapper}>
       {expenses?.map((expense) => (
         <ListItem
           key={expense.uuid}
           expense={expense}
-          editExpenses={editExpenses}
-          removeExpenses={removeExpenses}
+          editExpense={editExpense}
+          removeExpense={removeExpense}
         />
       ))}
     </div>
