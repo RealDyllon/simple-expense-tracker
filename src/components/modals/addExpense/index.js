@@ -27,7 +27,8 @@ const AddExpenseModal = ({ isVisible, setVisible, addExpense }) => {
 
   const handleChangeCost = (e) => {
     // todo: ensure only 2dp float is allowed
-    setCost(e.target.value);
+    // console.log("parsed to float", parseFloat(e.target.value));
+    setCost(parseFloat(e.target.value));
   };
 
   return (

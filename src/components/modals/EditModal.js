@@ -17,7 +17,7 @@ const EditModal = ({ expense, isVisible, setVisible, handleEdit }) => {
 
   const handleChangeCost = (e) => {
     // todo: ensure only 2dp float is allowed
-    setNewCost(e.target.value);
+    setNewCost(parseFloat(e.target.value));
   };
 
   const modalEditHandler = () => {
