@@ -11,7 +11,7 @@ const Expenses = ({ expenses, editExpense, removeExpense }) => {
         editExpense={editExpense}
         removeExpense={removeExpense}
       />
-      <ExpensesViz />
+      <ExpensesViz expenses={expenses} />
     </div>
   );
 };
@@ -23,5 +23,8 @@ const styles = {
     flex: 1,
     display: "flex",
     flexDirection: "row", // if mobile this should be column
+
+    overflow: "hidden",
+    maxHeight: "calc(100% - 56px)",
   },
 };

@@ -12,9 +12,7 @@ const DeleteModal = ({ isVisible, setVisible, handleDelete }) => {
       <Modal.Subtitle>
         Are you sure you want to delete this expense?
       </Modal.Subtitle>
-      <Modal.Content>
-        <p>Some content contained within the modal.</p>
-      </Modal.Content>
+      <Modal.Content></Modal.Content>
       <Modal.Action passive onClick={closeHandler}>
         Cancel
       </Modal.Action>

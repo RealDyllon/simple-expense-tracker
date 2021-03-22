@@ -1,7 +1,12 @@
 import React from "react";
+import TotalPie from "./graphs/TotalPie";
 
-const ExpensesViz = () => {
-  return <div style={styles.wrapper}>viz go here</div>;
+const ExpensesViz = ({ expenses }) => {
+  return (
+    <div style={styles.wrapper}>
+      <TotalPie expenses={expenses} />
+    </div>
+  );
 };
 
 export default ExpensesViz;
